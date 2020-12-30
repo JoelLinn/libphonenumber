@@ -126,6 +126,7 @@ if (${USE_RE2} STREQUAL "ON")
   find_required_library (RE2 re2/re2.h re2 "Google RE2")
 endif ()
 
+if (FALSE)
 find_required_library (PROTOBUF google/protobuf/message_lite.h protobuf
                        "Google Protocol Buffers")
 check_library_version (PC_PROTOBUF protobuf>=2.4)
@@ -145,6 +146,7 @@ endif ()
 
 find_required_program (PROTOC protoc
                        "Google Protocol Buffers compiler (protoc)")
+endif()
 
 if (${REGENERATE_METADATA} STREQUAL "ON")
   find_required_program (JAVA java
